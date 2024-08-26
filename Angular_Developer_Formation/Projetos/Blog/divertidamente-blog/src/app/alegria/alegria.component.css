@@ -1,0 +1,12 @@
+.emotion-card {
+    background-color: #FFD700; /* Dourado para Alegria */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .emotion-card:hover {
+    transform: scale(1.05);
+  }
+  
