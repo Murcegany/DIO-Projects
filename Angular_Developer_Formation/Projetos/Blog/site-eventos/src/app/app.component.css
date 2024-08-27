@@ -1,0 +1,9 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+  
+  mat-toolbar {
+    background: #3f51b5; /* Escolha uma cor suave para o fundo do toolbar */
+    color: white;
+  }
+  
