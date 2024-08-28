@@ -1,19 +1,93 @@
 /* styles.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    color: #555555;
+    background-color: #ffffff;
   }
   
-  .jumbotron {
-    background-color: #343a40;
-    color: white;
-    padding: 2rem 1rem;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: #f7cac9;
   }
   
-  section {
-    margin-top: 3rem;
+  .hero {
+    background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Flapisdenoiva.com%2Ffesta-de-casamento%2F&psig=AOvVaw2cDo_5X6wCY2ANHGqjuISO&ust=1724933030636000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPDjgbbSl4gDFQAAAAAdAAAAABAY') no-repeat center center/cover;
+    color: #ffffff;
+    padding: 100px 20px;
+    background-color: #f7cac9; /* fallback */
   }
   
-  h2 {
-    margin-bottom: 1.5rem;
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .btn-hero {
+    background-color: #f7e1c3;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.2rem;
+  }
+  
+  .about-us, .portfolio, .services, .contact {
+    text-align: center;
+  }
+  
+  .about-us p, .services p, .contact p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  
+  .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    color: #f7cac9;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+  
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .form-group label {
+    color: #f7cac9;
+  }
+  
+  .form-control {
+    border-radius: 30px;
+    border: 2px solid #f7cac9;
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+  
+  .btn-primary {
+    background-color: #f7cac9;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+  }
+  
+  .btn-primary:hover {
+    background-color: #f7a1a0;
   }
   
