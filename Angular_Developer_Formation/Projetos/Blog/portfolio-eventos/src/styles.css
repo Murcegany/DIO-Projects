@@ -1,21 +1,25 @@
-/* styles.css */
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+/* Importação de fontes */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap");
 
+/* Reset de box-sizing */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Estilos básicos para o body */
 body {
   margin: 0;
   padding: 0;
   background-color: #010101;
   font-family: "Ubuntu", sans-serif;
+  color: #ffffff; /* Garantir que o texto seja visível no fundo escuro */
 }
 
 a {
   text-decoration: none;
+  color: inherit; /* Para garantir que os links herdem a cor do texto */
 }
 
 button {
@@ -29,7 +33,6 @@ button {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
 }
-/* styles.css */
 
 /* Navbar Styles */
 .navbar {
@@ -47,14 +50,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar .logo i {
-  color: #aa4691;
+  color: #007bb5;
   font-size: 22px;
 }
 
 .navbar .logo a {
   font-size: 24px;
   font-weight: 700;
-  color: #f36ed2;
+  color: #007bb5;
   margin-left: 12px;
 }
 
@@ -87,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: transparent;
   color: #999999;
   border-radius: 10px;
-  border: 2px solid #aa4691;
+  border: 2px solid #007bb5;
   transition: 0.2s;
 }
 
@@ -198,25 +201,185 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-
-.about-us, .portfolio, .services, .contact {
+/* About Us Section Styles */
+.about-us {
+  background-color: #f4f4f4;
   padding: 60px 20px;
-  text-align: center;
+  position: relative;
+}
+
+.about-us h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-us p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
 }
 
 .btn-about-us {
-  background-color: #f7e1c3;
-  color: #333;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
+  background-color: #0aa5ff;
+  color: white;
+  padding: 12px 24px;
   font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  font-weight: 500;
+  border-radius: 8px;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.3s;
+  display: inline-block;
 }
 
 .btn-about-us:hover {
-  background-color: #eb8886;
-  color: #ffffff;
+  background-color: #007bb5;
+  transform: translateY(-3px);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+}
+
+.about-text {
+  max-width: 800px;
+}
+
+.about-image {
+  max-width: 100%;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .about-text {
+    flex: 1;
+    margin-right: 40px;
+  }
+
+  .about-image {
+    flex: 1;
+  }
+}
+
+/* Portfolio Section Styles */
+.swiper {
+  max-width: 800px;
+  aspect-ratio: 16/9;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  max-width: 660px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.swiper {
+  --swiper-theme-color: cyan;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-bullet-inactive-opacity: 0.4;
+}
+
+/* Services Section Styles */
+.services {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.services p {
+  font-size: 1.125rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Contact Section Styles */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact .form-group {
+  margin-bottom: 15px;
+}
+
+.contact label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.contact .form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.contact .form-control:focus {
+  border-color: #007bb5;
+  outline: none;
+}
+
+.contact .btn-primary {
+  background-color: #0aa5ff;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-transform: uppercase;
+}
+
+.contact .btn-primary:hover {
+  background-color: #007bb5;
+  transform: translateY(-3px);
 }
