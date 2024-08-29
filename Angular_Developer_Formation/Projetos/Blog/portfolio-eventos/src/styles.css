@@ -1,93 +1,242 @@
 /* styles.css */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Open Sans', sans-serif;
-    color: #555555;
-    background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  background-color: #010101;
+  font-family: "Ubuntu", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+/* styles.css */
+
+/* Navbar Styles */
+.navbar {
+  height: 90px;
+  background-color: hsl(0, 0%, 10%);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo i {
+  color: #aa4691;
+  font-size: 22px;
+}
+
+.navbar .logo a {
+  font-size: 24px;
+  font-weight: 700;
+  color: #aa4691;
+  margin-left: 12px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu-links {
+  display: flex;
+  gap: 24px;
+  border-right: 1px solid #999999;
+  padding-inline: 24px;
+}
+
+.menu-links a {
+  font-weight: 500;
+  color: #999999;
+  padding: 8px 16px;
+}
+
+.menu-links a:hover {
+  color: white;
+}
+
+.log-in {
+  font-weight: 500;
+  padding: 12px 22px;
+  background-color: transparent;
+  color: #999999;
+  border-radius: 10px;
+  border: 2px solid #aa4691;
+  transition: 0.2s;
+}
+
+.log-in:hover {
+  background-color: #0aa5ff;
+  color: white;
+}
+
+.menu-btn {
+  font-size: 32px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 53rem) {
+  .menu {
+    display: none;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
-    color: #f7cac9;
+
+  .menu-btn {
+    display: block;
   }
-  
-  .hero {
-    background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Flapisdenoiva.com%2Ffesta-de-casamento%2F&psig=AOvVaw2cDo_5X6wCY2ANHGqjuISO&ust=1724933030636000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPDjgbbSl4gDFQAAAAAdAAAAABAY') no-repeat center center/cover;
-    color: #ffffff;
-    padding: 100px 20px;
-    background-color: #f7cac9; /* fallback */
+}
+
+.hero {
+  background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Flapisdenoiva.com%2Ffesta-de-casamento%2F&psig=AOvVaw2cDo_5X6wCY2ANHGqjuISO&ust=1724933030636000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPDjgbbSl4gDFQAAAAAdAAAAABAY') no-repeat center center/cover;
+  color: #ffffff;
+  padding: 150px 20px;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+
+.hero:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  animation: fadeInDown 2s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.btn-hero {
+  background-color: #aa4691;
+  color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn-hero:hover {
+  background-color: #eb8886;
+  transform: scale(1.05);
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.scroll-down span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
   }
-  
-  .hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
+  40% {
+    transform: translateY(-15px);
   }
-  
-  .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+  60% {
+    transform: translateY(-7px);
   }
-  
-  .btn-hero {
-    background-color: #f7e1c3;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: none;
-    font-size: 1.2rem;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
   }
-  
-  .about-us, .portfolio, .services, .contact {
-    text-align: center;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .about-us p, .services p, .contact p {
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    line-height: 1.7;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
   }
-  
-  .card {
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .card-title {
-    font-size: 1.25rem;
-    color: #f7cac9;
-  }
-  
-  .card-text {
-    font-size: 1rem;
-  }
-  
-  form {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  .form-group label {
-    color: #f7cac9;
-  }
-  
-  .form-control {
-    border-radius: 30px;
-    border: 2px solid #f7cac9;
-    padding: 10px 15px;
-    font-size: 1rem;
-  }
-  
-  .btn-primary {
-    background-color: #f7cac9;
-    border: none;
-    border-radius: 30px;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-  }
-  
-  .btn-primary:hover {
-    background-color: #f7a1a0;
-  }
-  
+}
+
+.about-us, .portfolio, .services, .contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.btn-about-us {
+  background-color: #f7e1c3;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-about-us:hover {
+  background-color: #eb8886;
+  color: #ffffff;
+}

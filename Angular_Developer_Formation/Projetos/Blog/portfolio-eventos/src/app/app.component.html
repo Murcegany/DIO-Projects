@@ -1,74 +1,121 @@
-<div class="container">
-  <!-- Home Section -->
-  <section id="home" class="hero text-center">
-    <h1>Bem-vindo à LuArt eventos</h1>
-    <p>Transformando eventos em momentos inesquecíveis</p>
-    <button class="btn btn-hero">Explore nosso portfólio</button>
-  </section>
-
-  <!-- About Us Section -->
-  <section id="about" class="about-us py-5">
-    <h2>Sobre Nós</h2>
-    <p>Nós somos apaixonados por criar eventos que deixam uma marca duradoura. Nossa missão é trazer os sonhos dos nossos clientes à realidade.</p>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="portfolio py-5">
-    <h2>Portfólio</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://aceitosim.com.br/wp-content/uploads/2017/09/decoracao-de-casamento-vermelho-e-dourado2.jpg" alt="Evento 1" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">Casamento Romântico</h5>
-            <p class="card-text">Um casamento inesquecível com detalhes delicados e românticos.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://www.tuacasa.com.br/wp-content/uploads/2019/07/temas-para-festa-de-15-anos-0.jpg" alt="Evento 2" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">Festa de 15 Anos</h5>
-            <p class="card-text">Uma festa cheia de brilho e glamour, perfeita para celebrar essa data especial.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://restauranteterraemar.com.br/wp-content/uploads/2023/08/Evento-Corporativo.jpg" alt="Evento 3" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">Evento Corporativo</h5>
-            <p class="card-text">Um evento elegante e profissional, planejado com atenção a cada detalhe.</p>
-          </div>
-        </div>
-      </div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fa-solid fa-calendar-days"></i>
+      <a href="#">LuArt Eventos</a>
     </div>
-  </section>
+    <div class="menu">
+      <div class="menu-links">
+        <a href="#home">Home</a>
+        <a href="#about">Sobre Nós</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#services">Serviços</a>
+        <a href="#contact">Contato</a>
+      </div>
+      <button class="log-in">Log In</button>
+    </div>
+    <div class="menu-btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
 
-  <!-- Services Section -->
-  <section id="services" class="services py-5">
-    <h2>Serviços</h2>
-    <p>Oferecemos planejamento completo de eventos, desde a concepção até a execução, com foco nos detalhes que fazem a diferença.</p>
-  </section>
+  <div class="container">
+    <!-- Home Section -->
+    <section id="home" class="hero text-center">
+      <h1>Bem-vindo à LuArt Eventos</h1>
+      <p>Transformando eventos em momentos inesquecíveis</p>
+      <a href="#portfolio" class="btn btn-hero">Explore nosso portfólio</a>
+      <div class="scroll-down" onclick="scrollToNextSection()">
+        <span></span>
+      </div>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact py-5">
-    <h2>Contato</h2>
-    <form>
-      <div class="form-group">
-        <label for="name">Nome</label>
-        <input type="text" class="form-control" id="name" placeholder="Seu nome">
+    <!-- About Us Section -->
+    <section id="about" class="about-us py-5">
+      <h2>Sobre Nós</h2>
+      <p>
+        Somos especialistas em transformar eventos em experiências inesquecíveis. Com uma paixão incansável pelo que fazemos, nossa missão é transformar seus sonhos em realidade, criando momentos que serão lembrados para sempre.
+      </p>
+      <p>
+        Cada evento é único e trabalhamos com dedicação para capturar a essência de cada cliente, trazendo à vida celebrações que refletem seu estilo e personalidade.
+      </p>
+      <a href="#contact" class="btn-about-us">Saiba Mais</a>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio py-5">
+      <h2>Portfólio</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://aceitosim.com.br/wp-content/uploads/2017/09/decoracao-de-casamento-vermelho-e-dourado2.jpg" alt="Evento 1" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Casamento Romântico</h5>
+              <p class="card-text">Um casamento inesquecível com detalhes delicados e românticos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://www.tuacasa.com.br/wp-content/uploads/2019/07/temas-para-festa-de-15-anos-0.jpg" alt="Evento 2" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Festa de 15 Anos</h5>
+              <p class="card-text">Uma festa cheia de brilho e glamour, perfeita para celebrar essa data especial.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://restauranteterraemar.com.br/wp-content/uploads/2023/08/Evento-Corporativo.jpg" alt="Evento 3" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Evento Corporativo</h5>
+              <p class="card-text">Um evento elegante e profissional, planejado com atenção a cada detalhe.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Seu email">
-      </div>
-      <div class="form-group">
-        <label for="message">Mensagem</label>
-        <textarea class="form-control" id="message" rows="3" placeholder="Sua mensagem"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
-  </section>
-</div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services py-5">
+      <h2>Serviços</h2>
+      <p>Oferecemos planejamento completo de eventos, desde a concepção até a execução, com foco nos detalhes que fazem a diferença.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact py-5">
+      <h2>Contato</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" class="form-control" id="name" placeholder="Seu nome">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Seu email">
+        </div>
+        <div class="form-group">
+          <label for="message">Mensagem</label>
+          <textarea class="form-control" id="message" rows="3" placeholder="Sua mensagem"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- Script para a rolagem suave -->
+  <script>
+    function scrollToNextSection() {
+      const nextSection = document.querySelector('#about');
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
