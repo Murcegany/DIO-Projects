@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar .logo a {
   font-size: 24px;
   font-weight: 700;
-  color: #aa4691;
+  color: #f36ed2;
   margin-left: 12px;
 }
 
@@ -113,76 +113,68 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Hero Section Styles */
 .hero {
-  background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Flapisdenoiva.com%2Ffesta-de-casamento%2F&psig=AOvVaw2cDo_5X6wCY2ANHGqjuISO&ust=1724933030636000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPDjgbbSl4gDFQAAAAAdAAAAABAY') no-repeat center center/cover;
-  color: #ffffff;
-  padding: 150px 20px;
-  background-attachment: fixed;
-  position: relative;
-  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia25994/festa-fim-de-ano-afe.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
 }
 
-.hero:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: -1;
+.hero-content {
+  max-width: 800px;
 }
 
 .hero h1 {
   font-size: 4rem;
   font-weight: 700;
-  animation: fadeInDown 2s ease-in-out;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 30px;
-  animation: fadeInUp 2s ease-in-out;
+  line-height: 1.5;
+  color: #dcdcdc;
 }
 
 .btn-hero {
-  background-color: #aa4691;
-  color: #ffffff;
-  padding: 12px 30px;
-  border-radius: 50px;
-  border: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  background-color: #0aa5ff;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+  text-transform: uppercase;
 }
 
 .btn-hero:hover {
-  background-color: #eb8886;
-  transform: scale(1.05);
+  background-color: #007bb5;
+  transform: translateY(-3px);
 }
 
 .scroll-down {
   position: absolute;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 30px;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-  text-align: center;
   cursor: pointer;
+  animation: bounce 2s infinite;
 }
 
 .scroll-down span {
   display: block;
-  width: 10px;
-  height: 10px;
-  background-color: #ffffff;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #fff;
   border-radius: 50%;
-  margin: 0 auto;
-  animation: bounce 1.5s infinite;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
 }
 
 @keyframes bounce {
@@ -190,34 +182,22 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-15px);
+    transform: translateY(-10px);
   }
   60% {
-    transform: translateY(-7px);
+    transform: translateY(-5px);
   }
 }
 
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  100% {
+    transform: rotate(360deg);
   }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 .about-us, .portfolio, .services, .contact {
   padding: 60px 20px;
